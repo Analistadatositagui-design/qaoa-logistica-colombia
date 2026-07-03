@@ -1,0 +1,153 @@
+{
+  "proyecto": "Q-COFFEE v1.0 MaxCut",
+  "fase": "A - Fundamentos Clasicos (MaxCut)",
+  "autor": "Alber Mauricio Marquez Gutierrez",
+  "region": "Suroeste Antioqueno, Colombia",
+  "fecha": "2026-06-28T18:15:05.359498",
+  "justificacion_pivote": "Pivote de formulacion TSP/VRP a MaxCut para alinearse con el caso canonico de QAOA sobre hardware NISQ. MaxCut tiene formulacion validada en literatura desde Farhi 2014.",
+  "configuracion": {
+    "fincas": [
+      "Jerico",
+      "Jardin",
+      "Hispania"
+    ],
+    "num_fincas": 3,
+    "distancias_inter_fincas_km": [
+      [
+        0.0,
+        27.0,
+        30.0
+      ],
+      [
+        27.0,
+        0.0,
+        32.0
+      ],
+      [
+        30.0,
+        32.0,
+        0.0
+      ]
+    ],
+    "distancias_finca_andes_km": [
+      24.0,
+      22.0,
+      11.0
+    ],
+    "num_camiones": 2,
+    "qubits_requeridos": 3,
+    "fuente_datos": "Google Maps - rutas vehiculares, junio 2026"
+  },
+  "evaluacion_exhaustiva": [
+    {
+      "asignacion": [
+        0,
+        0,
+        0
+      ],
+      "maxcut_km": 0.0,
+      "costo_operativo_km": 90.0,
+      "descripcion": "Camion A: ['Jerico', 'Jardin', 'Hispania'] | Camion B: []"
+    },
+    {
+      "asignacion": [
+        0,
+        0,
+        1
+      ],
+      "maxcut_km": 62.0,
+      "costo_operativo_km": 95.0,
+      "descripcion": "Camion A: ['Jerico', 'Jardin'] | Camion B: ['Hispania']"
+    },
+    {
+      "asignacion": [
+        0,
+        1,
+        0
+      ],
+      "maxcut_km": 59.0,
+      "costo_operativo_km": 109.0,
+      "descripcion": "Camion A: ['Jerico', 'Hispania'] | Camion B: ['Jardin']"
+    },
+    {
+      "asignacion": [
+        0,
+        1,
+        1
+      ],
+      "maxcut_km": 57.0,
+      "costo_operativo_km": 113.0,
+      "descripcion": "Camion A: ['Jerico'] | Camion B: ['Jardin', 'Hispania']"
+    },
+    {
+      "asignacion": [
+        1,
+        0,
+        0
+      ],
+      "maxcut_km": 57.0,
+      "costo_operativo_km": 113.0,
+      "descripcion": "Camion A: ['Jardin', 'Hispania'] | Camion B: ['Jerico']"
+    },
+    {
+      "asignacion": [
+        1,
+        0,
+        1
+      ],
+      "maxcut_km": 59.0,
+      "costo_operativo_km": 109.0,
+      "descripcion": "Camion A: ['Jardin'] | Camion B: ['Jerico', 'Hispania']"
+    },
+    {
+      "asignacion": [
+        1,
+        1,
+        0
+      ],
+      "maxcut_km": 62.0,
+      "costo_operativo_km": 95.0,
+      "descripcion": "Camion A: ['Hispania'] | Camion B: ['Jerico', 'Jardin']"
+    },
+    {
+      "asignacion": [
+        1,
+        1,
+        1
+      ],
+      "maxcut_km": 0.0,
+      "costo_operativo_km": 90.0,
+      "descripcion": "Camion A: [] | Camion B: ['Jerico', 'Jardin', 'Hispania']"
+    }
+  ],
+  "mejor_maxcut": {
+    "asignacion": [
+      0,
+      0,
+      1
+    ],
+    "maxcut_km": 62.0,
+    "costo_operativo_km": 95.0,
+    "descripcion": "Camion A: ['Jerico', 'Jardin'] | Camion B: ['Hispania']"
+  },
+  "mejor_operativo": {
+    "asignacion": [
+      0,
+      0,
+      0
+    ],
+    "maxcut_km": 0.0,
+    "costo_operativo_km": 90.0,
+    "descripcion": "Camion A: ['Jerico', 'Jardin', 'Hispania'] | Camion B: []"
+  },
+  "peor_caso": {
+    "asignacion": [
+      0,
+      0,
+      0
+    ],
+    "maxcut_km": 0.0,
+    "costo_operativo_km": 90.0,
+    "descripcion": "Camion A: ['Jerico', 'Jardin', 'Hispania'] | Camion B: []"
+  }
+}

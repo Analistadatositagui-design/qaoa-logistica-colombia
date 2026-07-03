@@ -1,0 +1,139 @@
+{
+  "proyecto": "Q-COFFEE v1.0 MaxCut",
+  "fase": "C - Hardware Cuantico Real",
+  "titulo_formal": "Q-COFFEE v1.0 - Primera implementacion documentada de QAOA-MaxCut aplicada a la cadena cafetera del Suroeste Antioqueno, ejecutada en hardware IBM Quantum Heron.",
+  "autor": "Alber Mauricio Marquez Gutierrez",
+  "region": "Suroeste Antioqueno, Colombia",
+  "fecha": "2026-06-29T09:49:31.445061",
+  "hardware": {
+    "backend": "ibm_marrakesh",
+    "qubits_fisicos": 156,
+    "job_id": "d918bteu9n7c73am5nmg",
+    "shots": 4096,
+    "tiempo_espera_s": 6.776526
+  },
+  "parametros_transferidos": {
+    "gammas": [
+      0.976943141432181,
+      0.5922645317419446
+    ],
+    "betas": [
+      0.8456324231633933,
+      0.5700259653761542
+    ],
+    "profundidad_p": 2
+  },
+  "solucion_hardware": {
+    "bitstring": "100",
+    "asignacion": [
+      0,
+      0,
+      1
+    ],
+    "maxcut_km": 62.0,
+    "camion_A": [
+      "Jerico",
+      "Jardin"
+    ],
+    "camion_B": [
+      "Hispania"
+    ],
+    "costo_operativo_km": 95.0
+  },
+  "distribucion_hardware": [
+    {
+      "bitstring": "100",
+      "asignacion": [
+        0,
+        0,
+        1
+      ],
+      "maxcut_km": 62.0,
+      "count": 1127,
+      "prob_pct": 27.5146484375
+    },
+    {
+      "bitstring": "011",
+      "asignacion": [
+        1,
+        1,
+        0
+      ],
+      "maxcut_km": 62.0,
+      "count": 1098,
+      "prob_pct": 26.806640625
+    },
+    {
+      "bitstring": "010",
+      "asignacion": [
+        0,
+        1,
+        0
+      ],
+      "maxcut_km": 59.0,
+      "count": 709,
+      "prob_pct": 17.3095703125
+    },
+    {
+      "bitstring": "101",
+      "asignacion": [
+        1,
+        0,
+        1
+      ],
+      "maxcut_km": 59.0,
+      "count": 643,
+      "prob_pct": 15.6982421875
+    },
+    {
+      "bitstring": "001",
+      "asignacion": [
+        1,
+        0,
+        0
+      ],
+      "maxcut_km": 57.0,
+      "count": 158,
+      "prob_pct": 3.857421875
+    },
+    {
+      "bitstring": "110",
+      "asignacion": [
+        0,
+        1,
+        1
+      ],
+      "maxcut_km": 57.0,
+      "count": 153,
+      "prob_pct": 3.7353515625
+    },
+    {
+      "bitstring": "111",
+      "asignacion": [
+        1,
+        1,
+        1
+      ],
+      "maxcut_km": 0.0,
+      "count": 105,
+      "prob_pct": 2.5634765625
+    },
+    {
+      "bitstring": "000",
+      "asignacion": [
+        0,
+        0,
+        0
+      ],
+      "maxcut_km": 0.0,
+      "count": 103,
+      "prob_pct": 2.5146484375
+    }
+  ],
+  "comparacion": {
+    "prob_optimo_simulador_pct": 61.4990234375,
+    "prob_optimo_hardware_pct": 54.3212890625,
+    "degradacion_pct": 7.177734375,
+    "veredicto": "EXCELENTE - Hardware mantiene concentracion alta"
+  }
+}
