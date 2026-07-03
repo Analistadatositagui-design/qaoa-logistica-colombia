@@ -1,0 +1,43 @@
+# ============================================================
+#  SECRETOS Y CREDENCIALES — NUNCA subir a un repo publico
+# ============================================================
+*token*
+*TOKEN*
+*.env
+.env
+clave*
+*api*key*
+*API*KEY*
+*apikey*
+*ANTRHOPIC*
+*anthropic*
+*Gemini*
+*gemini*
+*CLOUDEFLARE*
+*cloudflare*
+*password*
+*Gmail*pass*
+*.key
+*.pem
+credenciales*
+secrets*
+
+# ============================================================
+#  Python
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ============================================================
+#  Sistema operativo / editores
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/

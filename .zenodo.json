@@ -1,0 +1,24 @@
+{
+  "upload_type": "software",
+  "title": "QAOA aplicada a logística en Colombia: Q-COFFEE (MaxCut) y Q-CARGO-ZAM (RCSPP) ejecutadas en hardware IBM Quantum Heron",
+  "version": "1.0.0",
+  "language": "spa",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Marquez Gutierrez, Alber Mauricio"
+    }
+  ],
+  "keywords": [
+    "QAOA",
+    "quantum computing",
+    "MaxCut",
+    "RCSPP",
+    "logistics optimization",
+    "IBM Quantum",
+    "Heron",
+    "Colombia"
+  ],
+  "description": "<p>Dos demostraciones reproducibles del flujo de trabajo QAOA de transferencia de par&aacute;metros: los &aacute;ngulos variacionales se optimizan en simulador cl&aacute;sico y el circuito de par&aacute;metros fijos se ejecuta en hardware IBM Quantum Heron r2, midiendo la degradaci&oacute;n de la concentraci&oacute;n por ruido.</p><p><strong>Q-COFFEE</strong>: QAOA-MaxCut de 3 nodos (log&iacute;stica cafetera, Suroeste Antioque&ntilde;o) en ibm_marrakesh, Job d918bteu9n7c73am5nmg. Simulador 61.50%, hardware 54.32%.</p><p><strong>Q-CARGO-ZAM</strong>: RCSPP peque&ntilde;o (China&ndash;Medell&iacute;n, 8 rutas en 3 qubits) en ibm_fez, Job d92tk17d07jc73dvpnt0. Exacto 85.97%, simulador 85.52%, hardware 76.37%.</p><p><strong>Alcance honesto:</strong> las instancias son de tama&ntilde;o trivial y resolubles exactamente de forma cl&aacute;sica. El trabajo es de valor pedag&oacute;gico y metodol&oacute;gico, NO una demostraci&oacute;n de ventaja cu&aacute;ntica ni una primac&iacute;a verificada frente a la literatura.</p>"
+}

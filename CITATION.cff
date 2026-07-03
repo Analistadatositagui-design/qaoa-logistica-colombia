@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "Si usa este software o sus resultados, por favor cítelo como se indica a continuación."
+title: "QAOA aplicada a logística en Colombia: Q-COFFEE (MaxCut) y Q-CARGO-ZAM (RCSPP) ejecutadas en hardware IBM Quantum Heron"
+authors:
+  - family-names: "Marquez Gutierrez"
+    given-names: "Alber Mauricio"
+version: "1.0.0"
+date-released: "2026-07-02"
+license: MIT
+type: software
+keywords:
+  - QAOA
+  - quantum computing
+  - MaxCut
+  - RCSPP
+  - shortest path with resource constraints
+  - logistics optimization
+  - IBM Quantum
+  - Heron
+  - Colombia
+abstract: >-
+  Dos demostraciones reproducibles del flujo de trabajo QAOA de "transferencia
+  de parametros": los angulos variacionales se optimizan en simulador clasico
+  (statevector exacto o COBYLA) y el circuito de parametros fijos se ejecuta en
+  hardware IBM Quantum Heron r2, midiendo la degradacion de la concentracion por
+  ruido. Q-COFFEE resuelve un QAOA-MaxCut de 3 nodos (logistica cafetera,
+  Suroeste Antioqueno) en ibm_marrakesh. Q-CARGO-ZAM resuelve un RCSPP pequeno
+  (seleccion de ruta China-Medellin, 8 rutas codificadas en 3 qubits) con
+  penalizacion por deadline en ibm_fez. Ambos incluyen linea base clasica
+  exhaustiva y la trayectoria de optimizacion completa, incluidos los intentos
+  fallidos documentados. NOTA: las instancias son de tamano trivial y resolubles
+  exactamente de forma clasica; el trabajo es de valor pedagogico y metodologico,
+  no una demostracion de ventaja cuantica.
+# Tras publicar en Zenodo, descomente y complete el DOI:
+# doi: "10.5281/zenodo.XXXXXXX"
