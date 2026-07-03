@@ -1,0 +1,189 @@
+{
+  "proyecto": "Q-CARGO-ZAM v1.0",
+  "fase": "A - Referencia Clasica RCSPP",
+  "autor": "Alber Mauricio Marquez Gutierrez",
+  "ruta": "China -> Medellin",
+  "carga_kg": 500,
+  "fecha": "2026-07-01T15:21:58.724728",
+  "advertencia_datos": "Costos y tiempos ILUSTRATIVOS (orden de magnitud), no cotizaciones reales. Reemplazar por tarifas verificadas en v2.",
+  "nodos": {
+    "SZX": "Shenzhen (origen)",
+    "YAN": "Yantian (puerto maritimo China)",
+    "CAN": "Guangzhou (aeropuerto China)",
+    "CTG": "Cartagena (puerto Caribe)",
+    "BUN": "Buenaventura (puerto Pacifico)",
+    "BOG": "Bogota (aeropuerto Colombia)",
+    "MDE": "Medellin (destino)"
+  },
+  "arcos": [
+    {
+      "origen": "SZX",
+      "destino": "YAN",
+      "modo": "terrestre",
+      "costo_usd": 80,
+      "tiempo_dias": 1
+    },
+    {
+      "origen": "SZX",
+      "destino": "CAN",
+      "modo": "terrestre",
+      "costo_usd": 100,
+      "tiempo_dias": 1
+    },
+    {
+      "origen": "YAN",
+      "destino": "CTG",
+      "modo": "mar-std",
+      "costo_usd": 900,
+      "tiempo_dias": 34
+    },
+    {
+      "origen": "YAN",
+      "destino": "CTG",
+      "modo": "mar-exp",
+      "costo_usd": 1300,
+      "tiempo_dias": 28
+    },
+    {
+      "origen": "YAN",
+      "destino": "BUN",
+      "modo": "mar-std",
+      "costo_usd": 850,
+      "tiempo_dias": 28
+    },
+    {
+      "origen": "YAN",
+      "destino": "BUN",
+      "modo": "mar-exp",
+      "costo_usd": 1200,
+      "tiempo_dias": 23
+    },
+    {
+      "origen": "CAN",
+      "destino": "BOG",
+      "modo": "aire-std",
+      "costo_usd": 4500,
+      "tiempo_dias": 4
+    },
+    {
+      "origen": "CAN",
+      "destino": "BOG",
+      "modo": "aire-exp",
+      "costo_usd": 6000,
+      "tiempo_dias": 2
+    },
+    {
+      "origen": "CTG",
+      "destino": "MDE",
+      "modo": "terrestre",
+      "costo_usd": 250,
+      "tiempo_dias": 2
+    },
+    {
+      "origen": "BUN",
+      "destino": "MDE",
+      "modo": "terrestre",
+      "costo_usd": 300,
+      "tiempo_dias": 2
+    },
+    {
+      "origen": "BOG",
+      "destino": "MDE",
+      "modo": "terrestre",
+      "costo_usd": 150,
+      "tiempo_dias": 1
+    },
+    {
+      "origen": "BOG",
+      "destino": "MDE",
+      "modo": "aire-dom",
+      "costo_usd": 400,
+      "tiempo_dias": 1
+    }
+  ],
+  "deadline_experimento_dias": 28,
+  "rutas_factibles": [
+    {
+      "id": 0,
+      "costo_usd": 1230,
+      "tiempo_dias": 37,
+      "descripcion": "SZX-[terrestre]->YAN-[mar-std]->CTG-[terrestre]->MDE"
+    },
+    {
+      "id": 1,
+      "costo_usd": 1630,
+      "tiempo_dias": 31,
+      "descripcion": "SZX-[terrestre]->YAN-[mar-exp]->CTG-[terrestre]->MDE"
+    },
+    {
+      "id": 2,
+      "costo_usd": 1230,
+      "tiempo_dias": 31,
+      "descripcion": "SZX-[terrestre]->YAN-[mar-std]->BUN-[terrestre]->MDE"
+    },
+    {
+      "id": 3,
+      "costo_usd": 1580,
+      "tiempo_dias": 26,
+      "descripcion": "SZX-[terrestre]->YAN-[mar-exp]->BUN-[terrestre]->MDE"
+    },
+    {
+      "id": 4,
+      "costo_usd": 4750,
+      "tiempo_dias": 6,
+      "descripcion": "SZX-[terrestre]->CAN-[aire-std]->BOG-[terrestre]->MDE"
+    },
+    {
+      "id": 5,
+      "costo_usd": 5000,
+      "tiempo_dias": 6,
+      "descripcion": "SZX-[terrestre]->CAN-[aire-std]->BOG-[aire-dom]->MDE"
+    },
+    {
+      "id": 6,
+      "costo_usd": 6250,
+      "tiempo_dias": 4,
+      "descripcion": "SZX-[terrestre]->CAN-[aire-exp]->BOG-[terrestre]->MDE"
+    },
+    {
+      "id": 7,
+      "costo_usd": 6500,
+      "tiempo_dias": 4,
+      "descripcion": "SZX-[terrestre]->CAN-[aire-exp]->BOG-[aire-dom]->MDE"
+    }
+  ],
+  "optimo_sin_restriccion": {
+    "costo_usd": 1230,
+    "tiempo_dias": 37,
+    "ruta": "SZX-[terrestre]->YAN-[mar-std]->CTG-[terrestre]->MDE",
+    "metodo": "minimo costo (Dijkstra-equivalente)"
+  },
+  "optimo_rcspp": {
+    "costo_usd": 1580,
+    "tiempo_dias": 26,
+    "ruta": "SZX-[terrestre]->YAN-[mar-exp]->BUN-[terrestre]->MDE",
+    "deadline_dias": 28
+  },
+  "frontera_pareto": [
+    {
+      "tiempo_dias": 4,
+      "costo_usd": 6250,
+      "ruta": "SZX-[terrestre]->CAN-[aire-exp]->BOG-[terrestre]->MDE"
+    },
+    {
+      "tiempo_dias": 6,
+      "costo_usd": 4750,
+      "ruta": "SZX-[terrestre]->CAN-[aire-std]->BOG-[terrestre]->MDE"
+    },
+    {
+      "tiempo_dias": 26,
+      "costo_usd": 1580,
+      "ruta": "SZX-[terrestre]->YAN-[mar-exp]->BUN-[terrestre]->MDE"
+    },
+    {
+      "tiempo_dias": 31,
+      "costo_usd": 1230,
+      "ruta": "SZX-[terrestre]->YAN-[mar-std]->BUN-[terrestre]->MDE"
+    }
+  ]
+}

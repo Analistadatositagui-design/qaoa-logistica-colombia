@@ -1,0 +1,103 @@
+{
+  "proyecto": "Q-CARGO-ZAM v1.0",
+  "fase": "B v3 - QAOA-RCSPP optimizacion exacta",
+  "autor": "Alber Mauricio Marquez Gutierrez",
+  "ruta": "China -> Medellin",
+  "fecha": "2026-07-01T22:19:32.965425",
+  "advertencia_datos": "Costos/tiempos ILUSTRATIVOS calibrados contra rangos publicados (marzo 2026). Ver notas de calibracion en el reporte de validacion.",
+  "metodo": {
+    "optimizacion": "exacta por statevector numpy, 50 multistarts Nelder-Mead",
+    "verificacion": "qiskit-aer SamplerV2, 4096 shots",
+    "justificacion": "COBYLA con 5 warm-starts quedaba atrapado en minimos locales (36% vs 86% alcanzable). Con 3 qubits la optimizacion exacta es trivial y elimina esa fragilidad."
+  },
+  "configuracion_qaoa": {
+    "camino": "Q - codificacion binaria de rutas",
+    "num_rutas": 8,
+    "num_qubits": 3,
+    "profundidad_p": 2,
+    "deadline_dias": 28,
+    "lambda_grid": [
+      550.0,
+      650.0,
+      700.0,
+      750.0,
+      800.0,
+      850.0,
+      900.0
+    ],
+    "lambda_optimo": 800.0
+  },
+  "barrido_lambda_exacto": [
+    {
+      "lambda": 550.0,
+      "prob_optimo_pct": 73.07066372101764,
+      "prob_factible_pct": 76.45698052309693
+    },
+    {
+      "lambda": 650.0,
+      "prob_optimo_pct": 74.8787298959632,
+      "prob_factible_pct": 82.14366313058812
+    },
+    {
+      "lambda": 700.0,
+      "prob_optimo_pct": 81.17895404288814,
+      "prob_factible_pct": 89.12183707190499
+    },
+    {
+      "lambda": 750.0,
+      "prob_optimo_pct": 85.19125894696204,
+      "prob_factible_pct": 94.45322737349117
+    },
+    {
+      "lambda": 800.0,
+      "prob_optimo_pct": 85.97465257978052,
+      "prob_factible_pct": 96.9920336611118
+    },
+    {
+      "lambda": 850.0,
+      "prob_optimo_pct": 84.53158573316846,
+      "prob_factible_pct": 97.62771002448648
+    },
+    {
+      "lambda": 900.0,
+      "prob_optimo_pct": 81.98909436829872,
+      "prob_factible_pct": 97.43272954946367
+    }
+  ],
+  "parametros_optimos_para_hardware": {
+    "lambda": 800.0,
+    "gammas": [
+      -1.9580420170314996,
+      1.8911086349037443
+    ],
+    "betas": [
+      1.5222093058733401,
+      2.355835380888423
+    ]
+  },
+  "prediccion_exacta": {
+    "prob_optimo_pct": 85.97465257978052,
+    "prob_factible_pct": 96.9920336611118,
+    "distribucion": [
+      0.07672713969279917,
+      2.6131642783271443,
+      0.3180749208682083,
+      85.97465257978052,
+      9.85465916808996,
+      0.2595271516160941,
+      0.754642283961685,
+      0.14855247766354576
+    ]
+  },
+  "verificacion_samplerv2": {
+    "prob_optimo_pct": 85.5224609375,
+    "prob_factible_pct": 96.7041015625,
+    "shots": 4096,
+    "concuerda_con_exacta": true
+  },
+  "concentracion": {
+    "ruta_optima_id": 4,
+    "amplificacion": 6.841796875
+  },
+  "veredicto": "EXCELENTE - Optimizacion exacta valida y concentracion alta"
+}

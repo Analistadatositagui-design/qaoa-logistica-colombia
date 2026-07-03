@@ -1,0 +1,91 @@
+{
+  "proyecto": "Q-CARGO-ZAM v1.0",
+  "fase": "C - Hardware Cuantico Real",
+  "titulo_formal": "Q-CARGO-ZAM v1.0 - RCSPP multimodal China-Medellin resuelto con QAOA de parametros exactos transferidos, ejecutado en hardware IBM Quantum Heron.",
+  "autor": "Alber Mauricio Marquez Gutierrez",
+  "fecha": "2026-07-01T22:25:01.746650",
+  "hardware": {
+    "backend": "ibm_fez",
+    "qubits_fisicos": 156,
+    "job_id": "d92tk17d07jc73dvpnt0",
+    "shots": 4096,
+    "tiempo_espera_s": 9.232437,
+    "profundidad_transpilada": 119
+  },
+  "parametros_transferidos": {
+    "lambda": 800.0,
+    "gammas": [
+      -1.9580420170314996,
+      1.8911086349037443
+    ],
+    "betas": [
+      1.5222093058733401,
+      2.355835380888423
+    ],
+    "profundidad_p": 2,
+    "origen": "Fase B v3 (optimizacion exacta statevector)"
+  },
+  "solucion_hardware": {
+    "estado_bits": "011",
+    "ruta_id": 4,
+    "coincide_con_optimo": true
+  },
+  "comparacion_triple": {
+    "prob_optimo_exacta_pct": 85.97465257978052,
+    "prob_optimo_simulador_pct": 85.5224609375,
+    "prob_optimo_hardware_pct": 76.3671875,
+    "degradacion_pct": 9.1552734375,
+    "prob_factible_hardware_pct": 91.2109375
+  },
+  "distribucion_hardware": [
+    {
+      "ruta_id": 4,
+      "bits": "011",
+      "count": 3128,
+      "prob_pct": 76.3671875
+    },
+    {
+      "ruta_id": 5,
+      "bits": "100",
+      "count": 372,
+      "prob_pct": 9.08203125
+    },
+    {
+      "ruta_id": 2,
+      "bits": "001",
+      "count": 165,
+      "prob_pct": 4.0283203125
+    },
+    {
+      "ruta_id": 3,
+      "bits": "010",
+      "count": 148,
+      "prob_pct": 3.61328125
+    },
+    {
+      "ruta_id": 8,
+      "bits": "111",
+      "count": 118,
+      "prob_pct": 2.880859375
+    },
+    {
+      "ruta_id": 6,
+      "bits": "101",
+      "count": 62,
+      "prob_pct": 1.513671875
+    },
+    {
+      "ruta_id": 7,
+      "bits": "110",
+      "count": 56,
+      "prob_pct": 1.3671875
+    },
+    {
+      "ruta_id": 1,
+      "bits": "000",
+      "count": 47,
+      "prob_pct": 1.1474609375
+    }
+  ],
+  "veredicto": "EXCELENTE - Hardware mantiene concentracion alta"
+}
